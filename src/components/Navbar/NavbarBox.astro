@@ -1,0 +1,74 @@
+<style>
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+    to {
+      background-position: -200% center;
+    }
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+  }
+  .edge-navbar {
+    width: 200px;
+    backdrop-filter: blur(10px);
+  }
+  .navbar-container {
+    container-type: inline-size;
+    container-name: navbar-container;
+    color: white;
+    padding: 20px 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+  }
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    column-gap: 2em;
+  }
+  li {
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  li:hover {
+    animation: background-pan 1s linear infinite;
+    background-size: 200%;
+    font-size: 20px;
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (width < 1000px) {
+    .edge-navbar {
+      width: 100px;
+    }
+  }
+  @media (width < 600px) {
+    .edge-navbar {
+      width: 50px;
+    }
+  }
+</style>
+
+<div class='container'>
+  <div class='edge-navbar'></div>
+  <div class='navbar-container'>
+    <h1>F1</h1>
+    <ul class='navbar-list'>
+      <li>About</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  <div class='edge-navbar'></div>
+</div>
