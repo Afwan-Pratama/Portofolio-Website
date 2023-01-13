@@ -1,0 +1,16 @@
+---
+const { id } = Astro.props
+---
+
+<div class='container' id={id}>
+  <slot />
+</div>
+<style>
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
