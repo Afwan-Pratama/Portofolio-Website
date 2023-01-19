@@ -28,7 +28,7 @@ import NavLink from './NavLink.astro'
       transform: rotate(180deg);
     }
   }
-  .container {
+  .navbar {
     display: flex;
     width: 100%;
     position: fixed;
@@ -124,18 +124,18 @@ import NavLink from './NavLink.astro'
   }
 </style>
 
-<div class='container'>
+<div class='navbar'>
   <div class='edge-navbar'></div>
   <div class='navbar-container'>
     <h1>F1</h1>
     <ul class='navbar-list'>
-      <li>
+      <li class='about'>
         <NavLink title='About' />
       </li>
-      <li>
+      <li class='project'>
         <NavLink title='Project' />
       </li>
-      <li>
+      <li class='contact'>
         <NavLink title='Contact' />
       </li>
     </ul>

@@ -20,3 +20,24 @@ import ContactSection from './_ContactSection.astro'
     max-width: 60ch;
   }
 </style>
+<script>
+  let target = document.querySelectorAll('.container')
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        let navElement = document.getElementsByClassName(
+          entry.target.id.toString()
+        )
+        if (navElement[0] === undefined) return
+        navElement[0].children[0].classList.toggle(
+          'visited',
+          entry.isIntersecting
+        )
+      })
+    },
+    { rootMargin: '500px', threshold: 1 }
+  )
+  target.forEach((item) => {
+    observer.observe(item)
+  })
+</script>

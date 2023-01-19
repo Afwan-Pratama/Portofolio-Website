@@ -13,7 +13,8 @@ const { title } = Astro.props
     text-decoration: none;
   }
 
-  a:hover {
+  a:hover,
+  .visited {
     animation: background-pan 1.5s linear infinite;
     background-size: 200%;
     background-image: var(--accent-gradient);
@@ -25,7 +26,8 @@ const { title } = Astro.props
     display: none;
   }
 
-  a:hover > span {
+  a:hover,
+  .visited > span {
     --size: clamp(8px, 1.5vw, 15px);
 
     display: block;
@@ -35,13 +37,15 @@ const { title } = Astro.props
     animation: scale-star 700ms ease infinite;
   }
 
-  a:hover > span > svg {
+  a:hover,
+  .visited > span > svg {
     display: block;
     opacity: 0.7;
     animation: rotate-star 1000ms linear infinite;
   }
 
-  a:hover > span > svg > path {
+  a:hover,
+  .visited > span > svg > path {
     fill: rgb(var(--accent));
   }
 
