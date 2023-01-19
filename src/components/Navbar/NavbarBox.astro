@@ -122,6 +122,14 @@ import NavLink from './NavLink.astro'
       width: 50px;
     }
   }
+  @media (width < 450px) {
+    .navbar-container {
+      justify-content: space-around;
+    }
+    .edge-navbar {
+      display: none;
+    }
+  }
 </style>
 
 <div class='navbar'>
