@@ -26,8 +26,7 @@ const { title } = Astro.props
     display: none;
   }
 
-  a:hover,
-  .visited > span {
+  a:hover > span {
     --size: clamp(8px, 1.5vw, 15px);
 
     display: block;
@@ -37,15 +36,13 @@ const { title } = Astro.props
     animation: scale-star 700ms ease infinite;
   }
 
-  a:hover,
-  .visited > span > svg {
+  a:hover > span > svg {
     display: block;
     opacity: 0.7;
     animation: rotate-star 1000ms linear infinite;
   }
 
-  a:hover,
-  .visited > span > svg > path {
+  a:hover > span > svg > path {
     fill: rgb(var(--accent));
   }
 
